@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+  background:rgb(36, 35, 39) ;
+}
+/* ------------------------------- This section Down Below is for Home page for desktop Screen---------------------------- */
+
+#home{
+  height: 100vh;
+  width: 100%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(1, 1, 2, 0.3)),url(images/header\ video.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.navbar{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3% 40px;
+  width: 100%;
+  z-index: 3;
+}
+
+.logo{
+  font-size: 55px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+  
+}
+
+.nav-links{
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+  
+}
+
+
+.nav-links ul{
+  margin: 15px 61px;
+}
+
+
+.nav-links ul li{
+  display: inline-block;
+  margin: 0px 20px;
+  padding: 10px;
+  position: relative;
+  
+}
+
+
+
+.nav-links ul li a{
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+ 
+}
+.nav-links ul li a::after{
+  content:"" ;
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  background:linear-gradient(to left,#fff,#000);
+  bottom: -10px;
+  left: 0px;
+  transition: 0.3s;
+  
+  
+}
+
+.nav-links ul li a:hover::after{
+  width: 100%;
+  
+}
+
+.main-text{
+  position: absolute;
+display: grid;
+place-items: center;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%); 
+color: #fff;
+font-family: 'Poppins', sans-serif;
+z-index: 1;
+
+
+}
+.main-text p{
+  font-size: 17px;
+  
+}
+
+.main-text h1{
+  font-size: 120px;
+}
+
+.navbar .fas{
+  color: #fff;
+  display: none;
+}
+
+
+
+/* ------------------------------- This section Down Below is for Home page for Mobile Screen max width 1145px---------------------------- */
+
+@media(max-width:1145px){
+ 
+  .navbar{
+    padding: 0px;
+  }
+  .logo{
+    font-size: 30px;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+
+  .main-text h1{
+    font-size: 65px;
+  }
+  .main-text p{
+    font-size: 14px;
+    text-align: center;
+  }
+  .nav-links{
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    background: #000;
+    display: block;
+    height: 100vh;
+    z-index: 2;
+    top:0;
+    right: -200px; 
+    transition: 1s;
+    
+  }
+ 
+  .nav-links ul li{
+    display: block;
+    margin: 77px 0px;
+    
+
+  }
+  .navbar .fas{
+    color: #fff;
+    display: block;
+    margin: 32px;
+    font-size: 20px;
+  }
+  
+
+
+ .nav-links .fas{
+   display: flex;
+   margin-right: 33px;
+   float: right;
+ }
+
+}
+
+
+/* ------------------------------- This section Down Below is for About page for desktop Screen---------------------------- */
+
+#about{
+  width: 100%;
+  background: rgb(36, 35, 39);
+  display: block;
+  color: rgb(255, 255, 255);
+}
+#about h2{
+  text-align: center;
+  padding: 50px;
+  font-size: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-txt p {
+  letter-spacing: 0.3px;
+}
+
+.about-txt{
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+  width: 100%;
+
+}
+.card{
+  display: block;
+  width: 100%;
+  margin: auto;
+  
+}
+
+.in-card{
+  display: inline-block;
+  margin: 40px 40px;
+  border: 2px solid rgba(41, 41, 119, 0.781);
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(60, 60, 110, 0.781);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.in-card:hover{
+  background: rgba(112, 112, 218, 0.781);
+}
+.in-card img{
+  height: 250px;
+}
+.in-card h3{
+  font-size: 30px;
+}
+
+.cont-btn{
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background: transparent;
+  padding: 10px;
+  margin-bottom: 20px; 
+  transition: 0.3s;
+}
+
+.cont-btn:hover{
+  background:#fff;
+  color:  rgba(53, 53, 124, 0.781) ;
+  font-weight: bolder;
+}
+/* ------------------------------- This section Down Below is for About page for Mobile Screen max width 1145px----------------------------- */
+@media(max-width:1145px){
+
+.in-card img{
+  height: 130px;
+}
+.in-card h3{
+  font-size: 27px;
+}
+
+#about h2{
+  padding: 30px;
+  font-size: 40px;
+}
+
+.about-txt{
+  font-size: 20px;
+  padding: 0px 4px;
+
+}
+}
+
+/* ------------------------------- This section Down Below is for Blog page for desktop Screen---------------------------- */
+#blog{
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: rgb(209, 208, 208);
+
+}
+#blog h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+}
+#blog p{
+  font-size: 27px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  padding-top: 25px;
+}
+
+.precar{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin:auto;
+  
+  
+  
+}
+.review{
+  width: 300px;
+  margin: 20px;
+  border: 1px solid rgba(54, 54, 139, 0.781) ;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.review:hover{
+  background: rgb(36, 35, 39);
+  color: #fff;
+}
+
+.review img{
+  height: 190px;
+  width: 100%;
+
+}
+.review p {
+  font-size: 23px;
+  font-weight: bolder;
+  
+}
+.review p span{
+  font-size: 40px;
+}
+#blog .cont-btn{
+  color:  rgba(41, 41, 119, 0.781);
+  border: 1px solid  rgba(41, 41, 119, 0.781);
+  font-weight: bolder;
+}
+#blog .cont-btn:hover{
+  color: #fff;
+  background:rgba(41, 41, 119, 0.781) ;
+}
+
+/* ------------------------------- This section Down Below is for Blog page for Mobile Screen max width 1145px----------------------------- */
+@media(max-width:1145px){
+  .review{
+    padding: 15px;
+  }
+
+}
+
+/* ------------------------------- This section Down Below is for contact page for desktop Screen---------------------------- */
+
+
+#location{
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  
+}
+#location h2{
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+#location iframe{
+  width: 100%;
+}
+
+/* ------------------------------- This section Down Below is for About page for Mobile Screen max width 1145px----------------------------- */
+@media(max-width:1145px){
+  #location h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+  
+
+}
+
+
+
+
+
+
+/* ------------------------------- This section Down Below is for footer page for desktop Screen---------------------------- */
+footer{
+  background: rgba(60, 60, 110, 0.781);
+  width: 100%;
+  color: #fff;
+}
+
+.bottom-sec{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+}
+.bottom-sec h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 63px;
+
+}
+.quick-links {
+  display: block;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.quick-links a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+}
+.quick-links fas fa-caret-right{
+  margin-right: 10px;
+}
+
+.thank-you{
+ font-size: 20px;
+ text-align: center;
+ font-family: 'Quicksand', sans-serif;
+}
+
+/* ------------------------------- This section Down Below is for About page for Mobile Screen max width 1145px----------------------------- */
+
+
+@media(max-width:1145px){
+  .bottom-sec h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    margin-right: 55px;
+  
+  }
+  .quick-links {
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+  }
+  .thank-you{
+    font-size: 13px;
+   }
+}
